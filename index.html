@@ -71,16 +71,33 @@
       }
     }
 
-    @media screen and (max-width: 768px) {
-      #intro-box {
-        top: 140px;
-        left: 20px;
-        right: 20px;
-        width: calc(100% - 40px);
-        height: calc(100vh - 250px);
-        padding: 40px;
-      }
-    }
+   @media screen and (max-width: 768px) {
+  #intro-box {
+    top: 80px;
+    left: 10px;
+    right: 10px;
+    width: calc(100% - 20px);
+    height: calc(100vh - 160px); /* larger height */
+    padding: 50px; /* slightly more padding */
+  }
+
+  #intro-box p {
+    font-size: 18px; /* larger font for better readability */
+  }
+
+  #intro-box h1 {
+    font-size: 24px; /* optional: larger heading */
+  }
+
+  #intro-image {
+    max-width: 420px; /* increase image size */
+  }
+
+  #start-button {
+    font-size: 20px;
+    padding: 18px 32px;
+  }
+}
 
     #start-button,
     #restart-button {
