@@ -39,15 +39,15 @@
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     color: #171c8f;
     text-align: center;
-    padding: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
     width: 80%; /* relative to the viewport width */
-    height: 50%; /* relative to the viewport height */
-    top: 20%; /* start higher on the screen */
+    max-width: 839px;
+    top: 50%; /* Vertically center */
+    transform: translateY(-50%); /* Center vertically */
   }
 
   #intro-box p {
@@ -93,10 +93,8 @@
 
   @media screen and (min-width: 801px) {
     #intro-box {
-      top: 50px;
-      left: 50px;
-      width: 839px;
-      height: calc(890px - 100px);
+      top: 50%; /* Ensures vertical centering on larger screens */
+      transform: translateY(-50%); /* Centers the box perfectly */
       padding: 40px;
       margin-bottom: 100px;
     }
@@ -254,6 +252,7 @@
     }
   }
 </style>
+
 
  </head>
  <body>
