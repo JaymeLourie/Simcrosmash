@@ -246,12 +246,41 @@
     margin-bottom: 8px;
   }
 
-  #health-fill {
-    height: 100%;
-    background-color: #ff3b3b;
-    width: 100%;
-    transition: width 0.3s ease;
+#health-bar {
+  width: 200px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 8px;
+  position: fixed; /* Fix it to the viewport */
+  top: 10px; /* Position it towards the top */
+  left: 50%; /* Center it horizontally */
+  transform: translateX(-50%); /* Center it correctly */
+  z-index: 20; /* Ensure it stays on top of other elements */
+}
+
+#health-fill {
+  height: 100%;
+  background-color: #ff3b3b;
+  width: 100%;
+  transition: width 0.3s ease;
+}
+
+/* Additional responsiveness for smaller screens */
+@media screen and (max-width: 768px) {
+  #health-bar {
+    width: 160px; /* Reduce size for mobile */
+    top: 15px; /* Adjust positioning */
   }
+}
+
+@media screen and (max-height: 600px) {
+  #health-bar {
+    top: 5px; /* Make sure it's always visible even on short screens */
+  }
+}
+
 
   #particle-container {
     position: absolute;
