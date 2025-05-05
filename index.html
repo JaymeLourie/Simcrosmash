@@ -5,20 +5,31 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
    <title>Pop the Parasites Game</title>
      <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      height: auto;
-      overflow-x: hidden; /* allow horizontal scroll only to be hidden */
-    }
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  height: 100%; /* Full height */
+  overflow: hidden; /* Hide horizontal scroll */
+}
 
-    @media screen and (max-width: 768px) {
-      html, body {
-        height: 100%;
-        overflow: hidden; /* disable scroll only on mobile */
-      }
-    }
+/* For smaller desktop or laptop screens */
+@media screen and (min-width: 801px) and (max-width: 1024px) {
+  html, body {
+    overflow-y: scroll; /* Enable vertical scrolling */
+    height: 100%; /* Full height */
+  }
+
+  #game-container {
+    position: relative;
+    width: 100vw;
+    height: auto; /* Allow vertical growth */
+    background: url('assets/game-backdrop.gif') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+  }
+}
+
 
     #game-container {
       position: relative;
