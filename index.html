@@ -98,16 +98,35 @@
       }
     }
 
-    @media screen and (min-width: 801px) {
-      #intro-box {
-        top: 50px;
-        left: 50px;
-        width: 839px;
-        height: calc(890px - 100px);
-        padding: 40px;
-        margin-bottom: 100px;
-      }
-    }
+@media screen and (min-width: 801px) {
+  #intro-box {
+    top: 50px;
+    left: 50px;
+    width: 839px;
+    max-height: 80vh; /* Makes sure it's never too tall */
+    overflow: auto; /* Enables scrolling */
+    padding: 40px;
+    margin-bottom: 100px;
+
+    /* Custom scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: #fce300 transparent;
+  }
+
+  /* For Webkit browsers (Chrome, Safari) */
+  #intro-box::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  #intro-box::-webkit-scrollbar-thumb {
+    background-color: #fce300;
+    border-radius: 4px;
+  }
+
+  #intro-box::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
 
     #start-button,
     #restart-button {
